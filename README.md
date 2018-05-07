@@ -11,3 +11,5 @@ I liked the idea with one exception: you had to hardcode a lot of coordinates in
 1. Position text based on boxId (boxId, text-string).
 
 The original code from Prashant and Sanjay's paper can be found in [originalpaper.sas](https://github.com/srosanba/sas-consort-sgplot/blob/master/originalpaper.sas). The modified code can be found in [efficiencies.sas](https://github.com/srosanba/sas-consort-sgplot/blob/master/efficiencies.sas), with the corresponding macros in the [macros](https://github.com/srosanba/sas-consort-sgplot/tree/master/macros) folder. 
+
+WARNING: do not mistake this SAS code for a robust software suite. The macros were coded quickly and without ANY form of parameter checking (not even case-sensitivity). These are merely proof-of-concept macros. Use at your own risk. You have been warned.
