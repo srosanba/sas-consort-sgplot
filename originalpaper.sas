@@ -4,99 +4,7 @@
 ods listing gpath="&gpath";
 
 
-/* BEGIN ORIGINAL PROGRAM */
-
-/**
- * Create some vertices with x coordinate [0,100], and y [0,200].
- */
-data vertices;
-   input vId  vX  vY;
-   datalines;
- 0  30  200
- 1  30  190
- 2  30  180
- 3  50  180
- 4  30  170
- 5  30  160
- 6  20  150
- 7  30  150
- 8  40  150
- 9  60  150
-10  80  150
-11  20  140
-12  40  140
-13  60  140
-14  80  140
-15  20  100
-16  40  100
-17  60  100
-18  80  100
-19  20   90
-20  40   90
-21  60   90
-22  80   90
-23  20   50
-24  40   50
-25  60   50
-26  80   50
-27  20   40
-28  40   40
-29  60   40
-30  80   40
-;
-run;
-
-/**
- * Define links using the above vertices. Each link is assigned a separate
- * group value.
- */
-data links;
-   input linkId  v1  v2  v3  v4;
-   datalines;
- 1   1   4   .    .
- 2   2   3   .    .
- 3   5   7   6   11
- 4   7   8  12    .
- 5   8   9  13    .
- 6   9  10  14    .
- 7  15  19   .    .
- 8  16  20   .    .
- 9  17  21   .    .
-10  18  22   .    .
-11  23  27   .    .
-12  24  28   .    .
-13  25  29   .    .
-14  26  30   .    .
-;
-run;
-
-/**
- * Find the coordinates for the link vertices from the vertices data set
- * and create data for a series plot.
- */
-data linksCoord;
-   keep linkId vX vY;
-   array vertices{4} v1-v4;
-   set links;
-
-   /* Create a hash object from the vertices data set */
-   if _n_ = 1 then do;
-      declare hash vertCoords(dataset:'vertices');
-      vertCoords.defineKey('vId');
-      vertCoords.defineData('vX','vY');
-      vertCoords.defineDone();
-      call missing(vX, vY); /* avoid NOTE about uninitialized vars */
-      end;
-
-      /* Set vertex coordinates */
-      do idx = 1 to dim(vertices); /* iterate over vertices{} */
-         if vertices{idx} ne . then do;
-            vId = vertices{idx};
-            if vertCoords.find() eq 0 then
-               output;
-         end;
-      end;
-run;
+/* ORIGINAL PROGRAM, BOX AND LINK CREATION ORDER FLIPPED */
 
 /**
  * Empty Box Data
@@ -190,6 +98,98 @@ data filledBoxes;
 4   9    0
 4   4    0
 ;
+run;
+
+/**
+ * Create some vertices with x coordinate [0,100], and y [0,200].
+ */
+data vertices;
+   input vId  vX  vY;
+   datalines;
+ 0  30  200
+ 1  30  190
+ 2  30  180
+ 3  50  180
+ 4  30  170
+ 5  30  160
+ 6  20  150
+ 7  30  150
+ 8  40  150
+ 9  60  150
+10  80  150
+11  20  140
+12  40  140
+13  60  140
+14  80  140
+15  20  100
+16  40  100
+17  60  100
+18  80  100
+19  20   90
+20  40   90
+21  60   90
+22  80   90
+23  20   50
+24  40   50
+25  60   50
+26  80   50
+27  20   40
+28  40   40
+29  60   40
+30  80   40
+;
+run;
+
+/**
+ * Define links using the above vertices. Each link is assigned a separate
+ * group value.
+ */
+data links;
+   input linkId  v1  v2  v3  v4;
+   datalines;
+ 1   1   4   .    .
+ 2   2   3   .    .
+ 3   5   7   6   11
+ 4   7   8  12    .
+ 5   8   9  13    .
+ 6   9  10  14    .
+ 7  15  19   .    .
+ 8  16  20   .    .
+ 9  17  21   .    .
+10  18  22   .    .
+11  23  27   .    .
+12  24  28   .    .
+13  25  29   .    .
+14  26  30   .    .
+;
+run;
+
+/**
+ * Find the coordinates for the link vertices from the vertices data set
+ * and create data for a series plot.
+ */
+data linksCoord;
+   keep linkId vX vY;
+   array vertices{4} v1-v4;
+   set links;
+
+   /* Create a hash object from the vertices data set */
+   if _n_ = 1 then do;
+      declare hash vertCoords(dataset:'vertices');
+      vertCoords.defineKey('vId');
+      vertCoords.defineData('vX','vY');
+      vertCoords.defineDone();
+      call missing(vX, vY); /* avoid NOTE about uninitialized vars */
+      end;
+
+      /* Set vertex coordinates */
+      do idx = 1 to dim(vertices); /* iterate over vertices{} */
+         if vertices{idx} ne . then do;
+            vId = vertices{idx};
+            if vertCoords.find() eq 0 then
+               output;
+         end;
+      end;
 run;
 
 /**
