@@ -4,7 +4,7 @@
 ods listing gpath="&gpath";
 
 
-/* ORIGINAL PROGRAM, BOX AND LINK CREATION ORDER FLIPPED */
+/* ORIGINAL PROGRAM, WITH BOX DATA STEPS MOVED TO TOP */
 
 /**
  * Empty Box Data
