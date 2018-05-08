@@ -99,9 +99,8 @@ data linksCoord;
 run;
 
 /**
- * 
-Empty Box Data
-*/
+ * Empty Box Data
+ */
 data emptyBoxes;
    input epId xEp yEp;
    datalines;
@@ -256,10 +255,9 @@ data hTextL(drop=type n1-n5 arm);
 ;
 run;
 
-   /**
-   * 
-   Vertical text for stage labels
-   */
+/**
+  * Vertical text for stage labels
+  */
 data vText;
    input xVt yVt vtext $10-75;
    datalines;
