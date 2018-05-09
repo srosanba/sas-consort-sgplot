@@ -6,7 +6,7 @@ Prashant Hebbar and Sanjay Matange published a paper at PharmaSUG 2018 titled [C
 
 I liked the idea with one exception: you had to hardcode a **lot** of coordinates into the program. The box corners (x60), the link vertices (x37), the text location (x15). All of these hardcoded coordinates seemed like the kind of thing that could likely be made more efficient. Starting with the code from the paper ([originalpaper.sas](https://github.com/srosanba/sas-consort-sgplot/blob/master/originalpaper.sas)), I set about making modifications to the code to see whether or not I could (a) reduce the specifications burden and (b) make the whole process more robust to future changes in the diagram layout. The end result of this quest for efficiency was the creation of three helper [macros](https://github.com/srosanba/sas-consort-sgplot/tree/master/macros). The macros allow you to:
 
-1. **Specify the box locations with a 4-number summary (center, width, top, height).**  
+1. **Specify the box locations with a 4-number summary (center, top, width, height).**  
   a. The original method was an 8-number summary in which the coordinates for each corner of the box was specified.  
   b. The 4-number summary is going to take less time to type.  
   c. The 4-number summary also makes it significantly easier to resize and reposition a box.  
