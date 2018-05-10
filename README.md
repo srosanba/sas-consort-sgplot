@@ -19,22 +19,28 @@ I liked the idea with one exception: you had to hardcode a **lot** of coordinate
   b. The boxId approach is slightly faster during the initial specification.  
   c. Using the boxID approach means that the text automatically repositions itself when boxes are resized or repositioned.
 
-The revised code ([efficiencies.sas](https://github.com/srosanba/sas-consort-sgplot/blob/master/efficiencies.sas)) is much more compact than the original program and should be more robust to resizing and repositioning of boxes and links as the need arises. Here is a side-by-side of the box creation code (original on the left, efficiencies on the right).
+The revised code ([efficiencies.sas](https://github.com/srosanba/sas-consort-sgplot/blob/master/efficiencies.sas)) is much more compact than the original program and should be more robust to resizing and repositioning of boxes and links as the need arises. 
+
+Here is a side-by-side of the box creation code (original on the left, efficiencies on the right).
 
 <kbd>
    <img src="https://github.com/srosanba/sas-consort-sgplot/blob/master/img/boxesempty.png">
 </kbd>
 
-Here is a side-by-side of the links creation code. As you can see in the screen shot, my screen wasn't tall enough to capture the original link creation code. 
+<br>
+Here is a side-by-side of the links creation code (original on the left, efficiencies on the right). As you can see in the screen shot, my 23" vertically-oriented monitor wasn't tall enough to capture all of the original link creation code.
 
 <kbd>
    <img src="https://github.com/srosanba/sas-consort-sgplot/blob/master/img/links.png">
 </kbd>
 
-Here is a side-by-side of the centered horizontal text creation code. This is the place where using the "efficient" macros actually requires more typing (the data steps are the same length, but you have to add the macro call). It's more work up front, but it's robust to repositioned boxes down the road. 
+<br>
+Here is a side-by-side of the centered horizontal text creation code (original on the left, efficiencies on the right). This is the one place where using the "efficient" macros actually requires more typing (the data steps are the same length, but you have to add the macro call). It's more work up front, but it's robust to repositioning of boxes down the road. 
 
 <kbd>
    <img src="https://github.com/srosanba/sas-consort-sgplot/blob/master/img/texthc.png">
 </kbd>
 
-WARNING: do not mistake this SAS code for a robust software suite. The macros were coded quickly and without ANY form of parameter checking (not even case-sensitivity). These are merely proof-of-concept macros. Use at your own risk. You have been warned.
+<br>
+<br>
+**WARNING**: do not mistake this SAS code for a robust software suite. The macros were coded quickly and without ANY form of parameter checking (not even case-sensitivity). These are merely proof-of-concept macros. Use at your own risk. You have been warned.
