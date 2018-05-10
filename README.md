@@ -19,7 +19,7 @@ I liked the idea with one exception: you had to hardcode a **lot** of coordinate
   b. The boxId approach is slightly faster during the initial specification.  
   c. Using the boxID approach means that the text automatically repositions itself when boxes are resized or repositioned.
 
-The revised code ([efficiencies.sas](https://github.com/srosanba/sas-consort-sgplot/blob/master/efficiencies.sas)) is much more compact than the original program and should be more robust to resizing and repositioning of boxes and links as the need arises. 
+The revised code ([efficiencies.sas](https://github.com/srosanba/sas-consort-sgplot/blob/master/efficiencies.sas)) is much more compact than the original program and should be more robust to resizing and repositioning of boxes and links should the need arise. 
 
 Here is a side-by-side of the box creation code (original on the left, efficiencies on the right). Each line has 4 numbers instead of 2, but there are one fourth the number of lines. Additionally, resizing and repositioning boxes is easier.
 
