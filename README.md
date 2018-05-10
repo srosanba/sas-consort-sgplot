@@ -22,7 +22,7 @@ I liked the idea with one exception: you had to hardcode a **lot** of coordinate
 The revised code ([efficiencies.sas](https://github.com/srosanba/sas-consort-sgplot/blob/master/efficiencies.sas)) is much more compact than the original program and should be more robust to resizing and repositioning of boxes and links as the need arises. Here is a side-by-side of the box creation code (original on the left, efficiencies on the right).
 
 <kbd>
-![efficiencies](https://github.com/srosanba/sas-consort-sgplot/blob/master/img/emptyboxes.png)
+   <img src="https://github.com/srosanba/sas-consort-sgplot/blob/master/img/emptyboxes.png">
 </kbd>
 
 WARNING: do not mistake this SAS code for a robust software suite. The macros were coded quickly and without ANY form of parameter checking (not even case-sensitivity). These are merely proof-of-concept macros. Use at your own risk. You have been warned.
