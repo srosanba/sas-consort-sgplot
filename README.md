@@ -27,20 +27,20 @@ Here is a side-by-side of the box creation code (original on the left, efficienc
    <img src="https://github.com/srosanba/sas-consort-sgplot/blob/master/img/boxesempty.png">
 </kbd>
 
-<br>
+
 Here is a side-by-side of the links creation code (original on the left, efficiencies on the right). As you can see in the screen shot, my 23" vertically-oriented monitor wasn't tall enough to capture all of the original link creation code.
 
 <kbd>
    <img src="https://github.com/srosanba/sas-consort-sgplot/blob/master/img/links.png">
 </kbd>
 
-<br>
+
 Here is a side-by-side of the centered horizontal text creation code (original on the left, efficiencies on the right). This is the one place where using the "efficient" macros actually requires more typing (the data steps are the same length, but you have to add the macro call). It's more work up front, but it's robust to repositioning of boxes down the road. 
 
 <kbd>
    <img src="https://github.com/srosanba/sas-consort-sgplot/blob/master/img/texthc.png">
 </kbd>
 
-<br>
-<br>
+
+
 **WARNING**: do not mistake this SAS code for a robust software suite. The macros were coded quickly and without ANY form of parameter checking (not even case-sensitivity). These are merely proof-of-concept macros. Use at your own risk. You have been warned.
