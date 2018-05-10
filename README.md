@@ -23,10 +23,7 @@ The revised code ([efficiencies.sas](https://github.com/srosanba/sas-consort-sgp
 
 Here is a side-by-side of the box creation code (original on the left, efficiencies on the right).
 
-<kbd>
-   <img src="https://github.com/srosanba/sas-consort-sgplot/blob/master/img/boxesempty.png">
-</kbd>
-
+<kbd>![boxes efficiencies](https://github.com/srosanba/sas-consort-sgplot/blob/master/img/boxesempty.png)</kbd>
 
 Here is a side-by-side of the links creation code (original on the left, efficiencies on the right). As you can see in the screen shot, my 23" vertically-oriented monitor wasn't tall enough to capture all of the original link creation code.
 
