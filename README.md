@@ -30,8 +30,6 @@ The end result of this quest for efficiency was the creation of three helper [ma
   b. The boxId approach is slightly faster during the initial specification.  
   c. Using the boxID approach means that the text automatically repositions itself when boxes are resized or repositioned.
 
-The revised code ([efficiencies.sas](https://github.com/srosanba/sas-consort-sgplot/blob/master/efficiencies.sas)) is much more compact than the original program and should be more robust to resizing and repositioning of boxes and links should the need arise. 
-
 Here is a side-by-side of the box creation code (original on the left, efficiencies on the right). Each dataline has 4 numbers instead of 2, but there are one quarter the number of datalines. Additionally, resizing and repositioning boxes is easier.
 
 <kbd>![boxes efficiencies](https://github.com/srosanba/sas-consort-sgplot/blob/master/img/boxesempty.png)</kbd>
@@ -44,5 +42,6 @@ Here is a side-by-side of the centered horizontal text creation code (original o
 
 <kbd>![text efficiencies](https://github.com/srosanba/sas-consort-sgplot/blob/master/img/texthc.png)</kbd>
 
+**Conclusion**: The revised code ([efficiencies.sas](https://github.com/srosanba/sas-consort-sgplot/blob/master/efficiencies.sas)) is much more compact than the original program and should be more robust to resizing and repositioning of boxes and links should the need arise. 
 
 **WARNING**: do not mistake this SAS code for a robust software suite. The macros were coded quickly and without ANY form of parameter checking (not even case-sensitivity). These are merely proof-of-concept macros. Use at your own risk. You have been warned.
