@@ -32,11 +32,11 @@ The end result of this quest for efficiency was the creation of three helper [ma
 
 The revised code ([efficiencies.sas](https://github.com/srosanba/sas-consort-sgplot/blob/master/efficiencies.sas)) is much more compact than the original program and should be more robust to resizing and repositioning of boxes and links should the need arise. 
 
-Here is a side-by-side of the box creation code (original on the left, efficiencies on the right). Each line has 4 numbers instead of 2, but there are one fourth the number of lines. Additionally, resizing and repositioning boxes is easier.
+Here is a side-by-side of the box creation code (original on the left, efficiencies on the right). Each dataline has 4 numbers instead of 2, but there are one quarter the number of datalines. Additionally, resizing and repositioning boxes is easier.
 
 <kbd>![boxes efficiencies](https://github.com/srosanba/sas-consort-sgplot/blob/master/img/boxesempty.png)</kbd>
 
-Here is a side-by-side of the links creation code (original on the left, efficiencies on the right). As you can see in the screen shot, my 23" vertically-oriented monitor wasn't tall enough to capture all of the original link creation code. If the boxes dataset somewhat efficient, then the links dataset is supremely efficient.
+Here is a side-by-side of the links creation code (original on the left, efficiencies on the right). As you can see in the screen shot, my 23" vertically-oriented monitor wasn't tall enough to capture all of the original link creation code. If the boxes dataset was somewhat efficient, then the links dataset is supremely efficient.
 
 <kbd>![links efficiencies](https://github.com/srosanba/sas-consort-sgplot/blob/master/img/links.png)</kbd>
 
