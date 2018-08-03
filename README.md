@@ -44,4 +44,6 @@ Here is a side-by-side of the centered horizontal text creation code (original o
 
 **Conclusion**: The revised code ([efficiencies.sas](https://github.com/srosanba/sas-consort-sgplot/blob/master/efficiencies.sas)) is much more compact than the original program and should be more robust to resizing and repositioning of boxes and links should the need arise. 
 
-**WARNING**: do not mistake this SAS code for a robust software suite. The macros were coded quickly and without ANY form of parameter checking (not even case-sensitivity). These are merely proof-of-concept macros. Use at your own risk. You have been warned.
+**WARNING**: Do not mistake this SAS code for a robust software suite. The macros were coded quickly and without ANY form of parameter checking (not even case-sensitivity). These are merely proof-of-concept macros. Use at your own risk. You have been warned.
+
+**Post-script**: Subsequent to the creation of the above helper macros, further efficiencies were explored in the repo [sas-consort-experimental](https://github.com/srosanba/sas-consort-experimental). This repository provides a shortcut for the creation of the emptyBoxes dataset. Combining the two approaches might make you so efficient that you'll put yourself out of work. 
